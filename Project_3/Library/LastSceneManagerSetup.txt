@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/GPS_Test.unity
+- path: Assets/Scenes/POC+Scene.unity
   isLoaded: 1
   isActive: 1
