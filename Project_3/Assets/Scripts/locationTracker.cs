@@ -8,6 +8,8 @@ public class LocationTracker : MonoBehaviour
 
     public Text text;
 
+	private bool startedProperly = false;
+
     //Latitude longitutde variables
     private float startLatitude;
     private float startLongitude;
@@ -23,15 +25,17 @@ public class LocationTracker : MonoBehaviour
         print("LocationTracker started");
 
         // check if user has location service enabled
-        
+		/*
         if (!Input.location.isEnabledByUser)
         {
+			startedProperly = true;
             yield break;
         }
-        
+        */
+		startedProperly = true; // sure
 
         // Start service before querying location
-        Input.location.Start();
+        Input.location.Start(1.0f, 1.0f);
 
         // Wait until service initializes
         int maxWait = 20;
@@ -68,14 +72,20 @@ public class LocationTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        latitude = Input.location.lastData.latitude;
+		if (!startedProperly) return;
+        
+		latitude = Input.location.lastData.latitude;
         longitude = Input.location.lastData.longitude;
 
         // Access granted and location value could be retrieved
         print("Location: " + startLatitude + " " + startLongitude);
 
         text.text = "" +
-            "Location: " + latitude + " " + longitude + "\n" +
-            "Delta: " + (latitude - startLatitude) + " " + (longitude - startLongitude);
+            "Location:\n" 
+			+ latitude + "\n" 
+			+ longitude + "\n" 
+			+ "Delta:\n" 
+			+ (latitude - startLatitude) + "\n" 
+			+ (longitude - startLongitude);
     }
 }
