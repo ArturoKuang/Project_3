@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Multiplayer_Test/Playtest_1.unity
+- path: Assets/Scenes/Multiplayer_Test/Multiplayer_Test.unity
   isLoaded: 1
   isActive: 1
