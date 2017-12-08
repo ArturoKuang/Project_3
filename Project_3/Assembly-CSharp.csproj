@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\ButtonClicked.cs" />
      <Compile Include="Assets\Scripts\Lobby.cs" />
      <Compile Include="Assets\Scripts\LocationTracker.cs" />
+     <Compile Include="Assets\Scripts\Map.cs" />
      <Compile Include="Assets\Scripts\NameEntry.cs" />
      <Compile Include="Assets\Scripts\SessionManager.cs" />
  <Reference Include="UnityEngine.UIAutomation">

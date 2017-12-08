@@ -138,3 +138,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 650c1e412dac0323d37ae3023565f947 Assembly-CSharp.dll:.LocationTracker
 3fcb781e890da317ca48703eb6d5bfe9 Assembly-CSharp.dll:.SessionManager
 e3f4c1ccf7490935782282675adecc86 Assembly-CSharp.dll:.Lobby
+b15eafc02fa7246aca0d6717ca293625 Assembly-CSharp.dll:.Map
