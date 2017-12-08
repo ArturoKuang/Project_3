@@ -16,6 +16,11 @@ public class SessionManager : MonoBehaviour {
 	public bool isHost;
 
 	void Start() {
+		Screen.autorotateToPortraitUpsideDown = false;
+		Screen.autorotateToLandscapeLeft = false;
+		Screen.autorotateToLandscapeRight = false;
+		Screen.orientation = ScreenOrientation.Portrait;
+
 		DontDestroyOnLoad (gameObject);
 	}
 
