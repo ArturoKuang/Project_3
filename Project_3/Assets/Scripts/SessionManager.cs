@@ -10,6 +10,11 @@ public class SessionManager : MonoBehaviour {
 		IsHost = val;
 	}
 
+	public static Sprite ActiveButton { get; set; }
+	public Sprite activeButton;
+	public static Sprite InactiveButton { get; set; }
+	public Sprite inactiveButton;
+
 	//For debugging
 	public string playerName;
 	public string gameName;
@@ -20,6 +25,9 @@ public class SessionManager : MonoBehaviour {
 		Screen.autorotateToLandscapeLeft = false;
 		Screen.autorotateToLandscapeRight = false;
 		Screen.orientation = ScreenOrientation.Portrait;
+
+		ActiveButton = activeButton;
+		InactiveButton = inactiveButton;
 
 		DontDestroyOnLoad (gameObject);
 	}

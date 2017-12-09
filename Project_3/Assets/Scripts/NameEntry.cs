@@ -17,7 +17,8 @@ public class NameEntry : MonoBehaviour {
 	public Button[] buttons;
 
 	// Use this for initialization
-	void Start () {
+	void Start() { OnEnable(); }
+	void OnEnable () {
 		entry = transform.Find("Text").GetComponent<Text> ();
 		NameEntered ();
 	}
@@ -28,7 +29,9 @@ public class NameEntry : MonoBehaviour {
 		bool entryIsEmpty = (entry.text == "");
 		foreach (Button b in buttons) {
 			b.enabled = !entryIsEmpty;
-			b.GetComponent<Image> ().color = entryIsEmpty ? new Color(0.8f, 0.8f, 0.8f) : Color.white;
+			b.GetComponent<Image> ().sprite = entryIsEmpty ? 
+				SessionManager.InactiveButton : 
+				SessionManager.ActiveButton;
 		}
 
 		switch(storeEntry) {
